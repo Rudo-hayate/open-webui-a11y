@@ -84,12 +84,12 @@
 										{section}
 									</div>
 
-									<div class="my-2.5 px-1.5 markdown-prose-sm !list-none !w-full !max-w-none">
-										{#each changelog[version][section] as entry}
-											<div class="my-2">
+									<div class="my-2.5 px-1.5 markdown-prose-sm !w-full !max-w-none">
+										<ul class="!list-none space-y-2">
+											{#each changelog[version][section] as entry}
 												{@html DOMPurify.sanitize(entry?.raw)}
-											</div>
-										{/each}
+											{/each}
+										</ul>
 									</div>
 								</div>
 							{/each}
