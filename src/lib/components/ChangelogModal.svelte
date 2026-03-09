@@ -38,11 +38,11 @@
 <Modal bind:show size="xl">
 	<div class="px-6 pt-5 dark:text-white text-black">
 		<div class="flex justify-between items-start">
-			<h2 class="text-xl font-medium m-0">
+			<h1 class="text-xl font-medium m-0">
 				{$i18n.t("What's New in")}
 				{$WEBUI_NAME}
 				<Confetti x={[-1, -0.25]} y={[0, 0.5]} />
-			</h2>
+			</h1>
 			<button class="self-center" on:click={closeModal} aria-label={$i18n.t('Close')}>
 				<XMark className={'size-5'} />
 			</button>
@@ -62,15 +62,15 @@
 				{#if changelog}
 					{#each Object.keys(changelog) as version}
 						<div class=" mb-3 pr-2">
-							<h3 class="font-semibold text-xl mb-1 dark:text-white m-0">
+							<h2 class="font-semibold text-xl mb-1 dark:text-white m-0">
 								v{version} - {changelog[version].date}
-							</h3>
+							</h2>
 
 							<hr class="border-gray-50/50 dark:border-gray-850/50 my-2" />
 
 							{#each Object.keys(changelog[version]).filter((section) => section !== 'date') as section}
 								<div class="w-full">
-									<div
+									<h3
 										class="font-semibold uppercase text-xs {section === 'added'
 											? 'bg-blue-500/20 text-blue-700 dark:text-blue-200'
 											: section === 'fixed'
@@ -82,7 +82,7 @@
 														: ''}  w-fit rounded-xl px-2 my-2.5"
 									>
 										{section}
-									</div>
+									</h3>
 
 									<div class="my-2.5 px-1.5 markdown-prose-sm !list-none !w-full !max-w-none">
 										{#each changelog[version][section] as entry}
