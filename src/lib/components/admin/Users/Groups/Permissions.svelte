@@ -184,7 +184,7 @@
 		</div>
 	</div>
 
-	<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+	<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 	<div>
 		<div class=" mb-2 text-sm font-medium">{$i18n.t('Sharing Permissions')}</div>
@@ -394,7 +394,7 @@
 		{/if}
 	</div>
 
-	<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+	<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 	<div>
 		<div class=" mb-2 text-sm font-medium">{$i18n.t('Access Grants')}</div>
@@ -416,7 +416,7 @@
 		</div>
 	</div>
 
-	<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+	<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 	<div>
 		<div class=" mb-2 text-sm font-medium">{$i18n.t('Chat Permissions')}</div>
@@ -746,7 +746,7 @@
 		{/if}
 	</div>
 
-	<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+	<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 	<div>
 		<div class=" mb-2 text-sm font-medium">{$i18n.t('Features Permissions')}</div>
@@ -896,7 +896,7 @@
 		</div>
 	</div>
 
-	<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+	<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 	<div>
 		<div class=" mb-2 text-sm font-medium">{$i18n.t('Settings Permissions')}</div>

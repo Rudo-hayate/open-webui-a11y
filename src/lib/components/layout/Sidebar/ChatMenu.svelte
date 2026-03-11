@@ -364,7 +364,7 @@
 				<div class="flex items-center">{$i18n.t('Rename')}</div>
 			</button>
 
-			<hr class="border-gray-50/30 dark:border-gray-800/30 my-1" />
+			<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1" />
 
 			<button
 				draggable="false"

@@ -140,7 +140,7 @@
 <!-- {JSON.stringify(tokens)} -->
 {#each displayTokens as token, tokenIdx (tokenIdx)}
 	{#if token.type === 'hr'}
-		<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+		<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 	{:else if token.type === 'heading'}
 		<svelte:element this={headerComponent(token.depth)} dir="auto">
 			<MarkdownInlineTokens

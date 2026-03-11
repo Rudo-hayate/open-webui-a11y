@@ -118,7 +118,7 @@
 				{/if}
 
 				{#if messageList.length > 0}
-					<hr class=" border-gray-50 dark:border-gray-700/20 py-2.5 w-full" />
+					<hr aria-hidden="true" class=" border-gray-50 dark:border-gray-700/20 py-2.5 w-full" />
 				{/if}
 			</div>
 		{/if}

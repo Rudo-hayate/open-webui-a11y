@@ -72,7 +72,7 @@
 					</button>
 				</div>
 			</div>
-			<hr class="border-gray-50/30 dark:border-gray-800/30 my-1 mx-2" />
+			<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1 mx-2" />
 			<button
 				class="select-none flex gap-2 items-center px-3 py-1.5 text-sm cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl w-full"
 				on:click={() => {

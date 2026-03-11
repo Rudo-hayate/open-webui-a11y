@@ -883,7 +883,7 @@
 						{/if}
 
 						{#if !direct}
-							<hr class=" border-gray-100/50 dark:border-gray-700/10 my-2.5 w-full" />
+							<hr aria-hidden="true" class=" border-gray-100/50 dark:border-gray-700/10 my-2.5 w-full" />
 
 							<div class="flex flex-col w-full mt-2">
 								<label

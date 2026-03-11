@@ -717,7 +717,7 @@
 						</div>
 					</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 					<div class="my-2">
 						<div class="flex w-full justify-between items-center">
@@ -764,7 +764,7 @@
 					</div>
 
 					{#if ($functions ?? []).filter((func) => func.type === 'filter').length > 0 || ($functions ?? []).filter((func) => func.type === 'action').length > 0}
-						<hr class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
+						<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
 
 						{#if ($functions ?? []).filter((func) => func.type === 'filter').length > 0}
 							<div class="my-4">
@@ -801,7 +801,7 @@
 						{/if}
 					{/if}
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
 
 					<div class="my-4">
 						<Capabilities bind:capabilities />
@@ -842,7 +842,7 @@
 						/>
 					</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
 
 					<div class="my-2 flex justify-end">
 						<button

@@ -94,7 +94,7 @@
 			<div class="mb-3.5">
 				<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Tasks')}</div>
 
-				<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+				<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 				<div class=" mb-2 font-medium flex items-center">
 					<div class=" text-xs mr-1">{$i18n.t('Task Model')}</div>

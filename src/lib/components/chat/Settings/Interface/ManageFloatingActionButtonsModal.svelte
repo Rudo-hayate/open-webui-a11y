@@ -164,7 +164,7 @@
 									</button>
 								</div>
 
-								<hr class="border-gray-50 dark:border-gray-850/30 my-2" />
+								<hr aria-hidden="true" class="border-gray-50 dark:border-gray-850/30 my-2" />
 							{/each}
 						{/if}
 					</div>

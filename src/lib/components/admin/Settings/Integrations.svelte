@@ -164,7 +164,7 @@
 				<div class="mb-3">
 					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 					<div class="mb-2.5 flex flex-col w-full justify-between">
 						<div class="flex justify-between items-center mb-0.5">
@@ -211,7 +211,7 @@
 						</div>
 					</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-4" />
 
 					<div class="mb-2.5 flex flex-col w-full">
 						<div class="flex justify-between items-center mb-1">

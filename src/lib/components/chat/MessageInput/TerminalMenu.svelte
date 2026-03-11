@@ -179,7 +179,7 @@
 					{/each}
 
 					{#if directTerminals.length > 0 && systemTerminals.length > 0}
-						<hr class="border-gray-100 dark:border-gray-800 my-1" />
+						<hr aria-hidden="true" class="border-gray-100 dark:border-gray-800 my-1" />
 					{/if}
 				{/if}
 

@@ -315,7 +315,7 @@
 			</div>
 		</div>
 
-		<hr class=" border-gray-100/30 dark:border-gray-850/30" />
+		<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30" />
 
 		{#if TTSEngine === 'browser-kokoro'}
 			{#if TTSModel}

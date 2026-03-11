@@ -61,7 +61,7 @@
 			</select>
 		</div>
 
-		<!-- <hr class=" border-gray-100 dark:border-gray-700/10 my-2.5 w-full" /> -->
+		<!-- <hr aria-hidden="true" class=" border-gray-100 dark:border-gray-700/10 my-2.5 w-full" /> -->
 
 		{#if modelIds.length > 0}
 			<div class="flex flex-col">

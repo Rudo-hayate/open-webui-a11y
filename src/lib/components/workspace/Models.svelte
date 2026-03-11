@@ -544,7 +544,7 @@
 							<div class="flex items-center">{$i18n.t('Disable All')}</div>
 						</button>
 
-						<hr class="border-gray-100 dark:border-gray-800 my-1" />
+						<hr aria-hidden="true" class="border-gray-100 dark:border-gray-800 my-1" />
 
 						<button
 							class="select-none flex w-full gap-2 items-center px-3 py-1.5 text-sm font-medium cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md"

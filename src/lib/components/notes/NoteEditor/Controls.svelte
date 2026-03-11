@@ -84,7 +84,7 @@
 				</div>
 			</div>
 
-			<hr class="my-2 border-gray-50 dark:border-gray-700/10" />
+			<hr aria-hidden="true" class="my-2 border-gray-50 dark:border-gray-700/10" />
 		{/if}
 
 		<div class=" text-xs font-medium mb-1">{$i18n.t('Model')}</div>

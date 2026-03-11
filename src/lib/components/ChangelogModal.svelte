@@ -66,7 +66,7 @@
 								v{version} - {changelog[version].date}
 							</h3>
 
-							<hr class="border-gray-50/50 dark:border-gray-850/50 my-2" />
+							<hr aria-hidden="true" class="border-gray-50/50 dark:border-gray-850/50 my-2" />
 
 							{#each Object.keys(changelog[version]).filter((section) => section !== 'date') as section}
 								<div class="w-full">

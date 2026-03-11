@@ -238,7 +238,7 @@
 											bind:modelIds={defaultModelIds}
 										/>
 
-										<hr class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
+										<hr aria-hidden="true" class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
 
 										<ModelSelector
 											title={$i18n.t('Pinned Models')}
@@ -249,7 +249,7 @@
 											bind:modelIds={defaultPinnedModelIds}
 										/>
 
-										<hr class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
+										<hr aria-hidden="true" class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
 
 										<div>
 											<button
@@ -286,7 +286,7 @@
 											{/if}
 										</div>
 
-										<hr class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
+										<hr aria-hidden="true" class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
 
 										<div>
 											<button
@@ -342,7 +342,7 @@
 											{/if}
 										</div>
 
-										<hr class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
+										<hr aria-hidden="true" class=" border-gray-50 dark:border-gray-800/10 my-2.5 w-full" />
 
 										<div>
 											<button

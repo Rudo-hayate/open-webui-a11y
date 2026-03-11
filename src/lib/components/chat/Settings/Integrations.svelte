@@ -136,7 +136,7 @@
 					</div>
 				</div>
 
-				<hr class="border-gray-100/50 dark:border-gray-850/50 my-4" />
+				<hr aria-hidden="true" class="border-gray-100/50 dark:border-gray-850/50 my-4" />
 
 				<div class="pr-1.5">
 					<Terminals bind:servers={terminalServerConfigs} onChange={() => updateHandler()} />

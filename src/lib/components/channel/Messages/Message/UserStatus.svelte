@@ -115,7 +115,7 @@
 		{/if}
 
 		{#if $_user?.id !== user.id}
-			<hr class="border-gray-100/50 dark:border-gray-800/50 my-2.5" />
+			<hr aria-hidden="true" class="border-gray-100/50 dark:border-gray-800/50 my-2.5" />
 
 			<div class=" flex flex-col w-full px-2.5 items-center">
 				<button

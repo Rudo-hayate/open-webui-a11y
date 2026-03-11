@@ -48,7 +48,7 @@
 							)}
 						</div>
 
-						<hr class="dark:border-gray-800 my-3" />
+						<hr aria-hidden="true" class="dark:border-gray-800 my-3" />
 						<div class="my-2">
 							{$i18n.t('Support this plugin:')}
 							<a

@@ -120,7 +120,7 @@
 				</div>
 			{/if}
 		</div>
-		<!-- <hr class="my-1 border-gray-100/5- dark:border-gray-850/50" /> -->
+		<!-- <hr aria-hidden="true" class="my-1 border-gray-100/5- dark:border-gray-850/50" /> -->
 
 		{#if search}
 			<div class="flex gap-1 px-1 mb-1">

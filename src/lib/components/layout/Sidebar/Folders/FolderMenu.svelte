@@ -54,7 +54,7 @@
 				<div class="flex items-center">{$i18n.t('Create Folder')}</div>
 			</button>
 
-			<hr class="border-gray-50/30 dark:border-gray-800/30 my-1" />
+			<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1" />
 
 			<button
 				class="flex gap-2 items-center px-3 py-1.5 text-sm select-none cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 rounded-xl w-full"

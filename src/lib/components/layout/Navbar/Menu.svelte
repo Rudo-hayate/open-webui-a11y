@@ -324,7 +324,7 @@
 					<div class="flex items-center">{$i18n.t('Artifacts')}</div>
 				</button>
 
-				<hr class="border-gray-50/30 dark:border-gray-800/30 my-1" />
+				<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1" />
 			{/if}
 
 			{#if !$temporaryChatEnabled && ($user?.role === 'admin' || ($user.permissions?.chat?.share ?? true))}
@@ -402,7 +402,7 @@
 			</button>
 
 			{#if !$temporaryChatEnabled && chat?.id}
-				<hr class="border-gray-50/30 dark:border-gray-800/30 my-1" />
+				<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1" />
 
 				{#if $folders.length > 0}
 					<DropdownSub maxWidth={200}>
@@ -446,7 +446,7 @@
 					<div class="flex items-center">{$i18n.t('Archive')}</div>
 				</button>
 
-				<hr class="border-gray-50/30 dark:border-gray-800/30 my-1" />
+				<hr aria-hidden="true" class="border-gray-50/30 dark:border-gray-800/30 my-1" />
 
 				<div class="flex p-1">
 					<Tags chatId={chat.id} />

@@ -43,7 +43,7 @@
 				<div class="mb-3.5">
 					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 					<div class="mb-2.5">
 						<div class=" flex w-full justify-between">
@@ -167,7 +167,7 @@
 				<div class="mb-3.5">
 					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Code Interpreter')}</div>
 
-					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+					<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 					<div class="mb-2.5">
 						<div class=" flex w-full justify-between">
@@ -291,7 +291,7 @@
 							</div>
 						{/if}
 
-						<hr class="border-gray-100/30 dark:border-gray-850/30 my-2" />
+						<hr aria-hidden="true" class="border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 						<div>
 							<div class="py-0.5 w-full">
