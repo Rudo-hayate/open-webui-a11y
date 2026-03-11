@@ -26,6 +26,7 @@
 	export let onClose;
 	export let onNodeClick;
 
+	let animationStopped = false;
 	let selectedMessageId = null;
 
 	const nodes = writable([]);
@@ -116,7 +117,7 @@
 					selectable: false,
 					class: ' dark:fill-gray-300 fill-gray-300',
 					type: 'smoothstep',
-					animated: history.currentId === id || recurseCheckChild(id, history.currentId)
+					animated: animationStopped ? false : history.currentId === id || recurseCheckChild(id, history.currentId)
 				});
 			}
 		});
@@ -136,6 +137,18 @@
 	const setLayoutDirection = (direction) => {
 		layoutDirection = direction;
 		drawFlow(layoutDirection);
+	};
+
+	const stopAnimation = () => {
+		animationStopped = !animationStopped;
+		if (animationStopped) {
+			edges.update((edges) =>
+				edges.map((edge) => ({
+					...edge,
+					animated: false
+				}))
+			);
+		}
 	};
 
 	onMount(() => {
@@ -178,6 +191,7 @@
 			{nodeTypes}
 			{edges}
 			{setLayoutDirection}
+			{stopAnimation}
 			on:nodeclick={(e) => {
 				onNodeClick(e.detail);
 				selectedMessageId = e.detail.node.data.message.id;

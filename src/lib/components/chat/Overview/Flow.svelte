@@ -11,15 +11,15 @@
 		BackgroundVariant,
 		ControlButton
 	} from '@xyflow/svelte';
-	import BarsArrowUp from '$lib/components/icons/BarsArrowUp.svelte';
-	import Bars3BottomLeft from '$lib/components/icons/Bars3BottomLeft.svelte';
 	import AlignVertical from '$lib/components/icons/AlignVertical.svelte';
 	import AlignHorizontal from '$lib/components/icons/AlignHorizontal.svelte';
+	import Stop from '$lib/components/icons/Stop.svelte';
 
 	export let nodes;
 	export let nodeTypes;
 	export let edges;
 	export let setLayoutDirection;
+	export let stopAnimation;
 </script>
 
 <SvelteFlow
@@ -48,6 +48,9 @@
 		</ControlButton>
 		<ControlButton on:click={() => setLayoutDirection('horizontal')} title="Horizontal Layout">
 			<AlignHorizontal className="size-4" />
+		</ControlButton>
+		<ControlButton on:click={() => stopAnimation()} title="Stop animation">
+			<Stop className="size-4" />
 		</ControlButton>
 	</Controls>
 	<Background variant={BackgroundVariant.Dots} />
