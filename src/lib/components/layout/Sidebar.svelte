@@ -690,7 +690,7 @@
 />
 
 {#if !$mobile && !$showSidebar}
-	<div
+	<nav aria-label={$i18n.t('Navigation sidebar')}
 		class=" pt-[7px] pb-2 px-2 flex flex-col justify-between text-black dark:text-white hover:bg-gray-50/30 dark:hover:bg-gray-950/30 h-full z-10 transition-all border-e-[0.5px] border-gray-50 dark:border-gray-850/30"
 		id="sidebar"
 	>
@@ -873,16 +873,17 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</nav>
 {/if}
 
 <!-- {$i18n.t('New Folder')} -->
 <!-- {$i18n.t('Pinned')} -->
 
 {#if $showSidebar}
-	<div
+	<nav
 		bind:this={navElement}
 		id="sidebar"
+		aria-label={$i18n.t('Navigation sidebar')}
 		class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
 			? `${$mobile ? 'bg-gray-50 dark:bg-gray-950' : 'bg-gray-50/70 dark:bg-gray-950/70'} z-50`
 			: ' bg-transparent z-0 '} {$isApp
@@ -1443,7 +1444,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</nav>
 
 	{#if !$mobile}
 		<div

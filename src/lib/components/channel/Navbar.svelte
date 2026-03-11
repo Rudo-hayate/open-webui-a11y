@@ -53,7 +53,9 @@
 
 <PinnedMessagesModal bind:show={showChannelPinnedMessagesModal} {channel} {onPin} />
 <ChannelInfoModal bind:show={showChannelInfoModal} {channel} {onUpdate} />
-<nav class="sticky top-0 z-30 w-full px-1.5 py-1 -mb-8 flex items-center drag-region flex flex-col">
+<nav class="sticky top-0 z-30 w-full px-1.5 py-1 -mb-8 flex items-center drag-region flex flex-col"
+		 aria-label={$i18n.t('Navigation chat')}
+>
 	<div
 		id="navbar-bg-gradient-to-b"
 		class=" bg-linear-to-b via-50% from-white via-white to-transparent dark:from-gray-900 dark:via-gray-900 dark:to-transparent pointer-events-none absolute inset-0 -bottom-7 z-[-1]"

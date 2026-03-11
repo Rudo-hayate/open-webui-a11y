@@ -73,6 +73,7 @@
 />
 
 <nav
+	aria-label={$i18n.t('Navigation chat')}
 	class="sticky top-0 z-30 w-full {chat?.id
 		? 'pt-0.5 pb-1'
 		: 'pt-1 pb-1'} -mb-12 flex flex-col items-center drag-region"
