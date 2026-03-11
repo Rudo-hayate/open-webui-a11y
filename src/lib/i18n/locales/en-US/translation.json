@@ -1960,6 +1960,7 @@
 	"To learn more about available endpoints, visit our documentation.": "",
 	"To select skills here, add them to the \"Skills\" workspace first.": "",
 	"To select toolkits here, add them to the \"Tools\" workspace first.": "",
+	"Toast notifications duration": "Toast duration (seconds)",
 	"Toast notifications for new updates": "",
 	"Today": "",
 	"Today at {{LOCALIZED_TIME}}": "",

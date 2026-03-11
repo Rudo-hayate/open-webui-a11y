@@ -40,6 +40,7 @@
 
 	let notificationSound = true;
 	let notificationSoundAlways = false;
+	let toastNotificationDuration = 15;
 
 	let highContrastMode = false;
 
@@ -103,6 +104,24 @@
 	let showManageImageCompressionModal = false;
 
 	let textScale = null;
+
+	const DEFAULT_TOAST_NOTIFICATION_DURATION_SECONDS = 15;
+	const MAX_TOAST_NOTIFICATION_DURATION_SECONDS = 300;
+
+	const normalizeToastNotificationDuration = (value) => {
+		const duration = Number(value);
+
+		if (!Number.isFinite(duration) || duration <= 0) {
+			return DEFAULT_TOAST_NOTIFICATION_DURATION_SECONDS;
+		}
+
+		return Math.min(MAX_TOAST_NOTIFICATION_DURATION_SECONDS, Math.round(duration));
+	};
+
+	const saveToastNotificationDuration = async () => {
+		toastNotificationDuration = normalizeToastNotificationDuration(toastNotificationDuration);
+		saveSettings({ toastNotificationDuration });
+	};
 
 	const toggleLandingPageMode = async () => {
 		landingPageMode = landingPageMode === '' ? 'chat' : '';
@@ -248,6 +267,9 @@
 
 		notificationSound = $settings?.notificationSound ?? true;
 		notificationSoundAlways = $settings?.notificationSoundAlways ?? false;
+		toastNotificationDuration = normalizeToastNotificationDuration(
+			$settings?.toastNotificationDuration ?? DEFAULT_TOAST_NOTIFICATION_DURATION_SECONDS
+		);
 
 		iframeSandboxAllowSameOrigin = $settings?.iframeSandboxAllowSameOrigin ?? false;
 		iframeSandboxAllowForms = $settings?.iframeSandboxAllowForms ?? false;
@@ -490,6 +512,26 @@
 					</div>
 				</div>
 			{/if}
+
+			<div>
+				<div class="py-0.5 flex w-full justify-between items-center gap-3">
+					<label id="toast-notification-duration-label" for="toast-notification-duration" class="self-center text-xs">
+						{$i18n.t('Toast notifications duration')}
+					</label>
+
+					<input
+						id="toast-notification-duration"
+						type="number"
+						min="1"
+						max={MAX_TOAST_NOTIFICATION_DURATION_SECONDS}
+						step="1"
+						class="w-10 rounded-sm px-2 py-1 text-xs bg-transparent text-right border border-gray-200 dark:border-gray-800"
+						bind:value={toastNotificationDuration}
+						on:change={saveToastNotificationDuration}
+						aria-labelledby="toast-notification-duration-label"
+					/>
+				</div>
+			</div>
 
 			<div>
 				<div id="allow-user-location-label" class=" py-0.5 flex w-full justify-between">

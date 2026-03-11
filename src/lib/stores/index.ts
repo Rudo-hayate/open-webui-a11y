@@ -212,6 +212,7 @@ type Settings = {
 	audio?: AudioSettings;
 	showUsername?: boolean;
 	notificationEnabled?: boolean;
+	toastNotificationDuration?: number;
 	highContrastMode?: boolean;
 	title?: TitleSettings;
 	showChatTitleInTab?: boolean;
