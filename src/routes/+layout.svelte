@@ -62,7 +62,7 @@
 	} from '$lib/utils/connections';
 
 	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL, WEBUI_HOSTNAME } from '$lib/constants';
-	import { bestMatchingLanguage, displayFileHandler } from '$lib/utils';
+	import { bestMatchingLanguage, displayFileHandler, ToastNotificationSettings } from '$lib/utils';
 	import { setTextScale } from '$lib/utils/text-scale';
 
 	import NotificationToast from '$lib/components/NotificationToast.svelte';
@@ -110,17 +110,6 @@
 	let heartbeatInterval = null;
 
 	const BREAKPOINT = 768;
-	const DEFAULT_TOAST_NOTIFICATION_DURATION_SECONDS = 15;
-
-	const getToastNotificationDuration = () => {
-		const durationSeconds = Number($settings?.toastNotificationDuration);
-
-		if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) {
-			return DEFAULT_TOAST_NOTIFICATION_DURATION_SECONDS * 1000;
-		}
-
-		return (Math.min(300, Math.round(durationSeconds)) * 1000);
-	};
 
 	const setupSocket = async (enableWebsocket) => {
 		const _socket = io(`${WEBUI_BASE_URL}` || undefined, {
@@ -481,7 +470,7 @@
 							content: content,
 							title: displayTitle
 						},
-						duration: getToastNotificationDuration(),
+						duration: 15000,
 						unstyled: true
 					});
 				}
@@ -684,7 +673,7 @@
 						content: data?.content,
 						title: `${title}`
 					},
-					duration: getToastNotificationDuration(),
+					duration: 15000,
 					unstyled: true
 				});
 			}
@@ -1091,4 +1080,5 @@
 	richColors
 	position="top-right"
 	closeButton
+	duration={ToastNotificationSettings.getDuration($settings)}
 />
