@@ -17,6 +17,7 @@ import re
 import markdown
 from bs4 import BeautifulSoup
 from open_webui.constants import ERROR_MESSAGES
+from open_webui.utils.changelog import hide_decorative_leading_icon
 
 ####################################
 # Load .env file
@@ -163,7 +164,7 @@ def parse_section(section):
     items = []
     for li in section.find_all('li'):
         # Extract raw HTML string
-        raw_html = str(li)
+        raw_html = hide_decorative_leading_icon(str(li))
 
         # Extract text without HTML tags
         text = li.get_text(separator=' ', strip=True)
