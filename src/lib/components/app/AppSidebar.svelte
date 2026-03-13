@@ -2,12 +2,14 @@
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
 	import Plus from '$lib/components/icons/Plus.svelte';
 	import { WEBUI_BASE_URL } from '$lib/constants';
+	import { getContext } from 'svelte';
 
+	const i18n = getContext('i18n');
 	let selected = '';
 </script>
 
 <nav
-	aria-label="App navigation"
+	aria-label={$i18n.t('App navigation')}
 	class="min-w-[4.5rem] bg-gray-50 dark:bg-gray-950 flex gap-2.5 flex-col pt-8"
 >
 	<div class="flex justify-center relative">
@@ -19,7 +21,7 @@
 
 		<Tooltip content="Home" placement="right">
 			<button
-				aria-label="Home"
+				aria-label={$i18n.t('Home')}
 				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'}"
 				on:click={() => {
 					selected = 'home';
@@ -48,7 +50,7 @@
 			</div>
 		{/if}
 		<button
-			aria-label="Chat"
+			aria-label={$i18n.t('Chat')}
 			class=" cursor-pointer bg-transparent"
 			on:click={() => {
 				selected = '';

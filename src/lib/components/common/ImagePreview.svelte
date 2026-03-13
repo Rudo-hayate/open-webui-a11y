@@ -92,6 +92,7 @@
 
 			<div>
 				<button
+					aria-label={$i18n.t('Download Image')}
 					class=" p-5 z-999"
 					on:click={() => {
 						if (src.startsWith('data:image/')) {

@@ -1267,6 +1267,7 @@
 									{#if $user?.role === 'admin' || ($user?.permissions?.chat?.regenerate_response ?? true)}
 										{#if $settings?.regenerateMenu ?? true}
 											<button
+												aria-label={$i18n.t('Regenerate')}
 												type="button"
 												class="hidden regenerate-response-button"
 												on:click={() => {

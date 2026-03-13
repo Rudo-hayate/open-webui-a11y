@@ -127,6 +127,7 @@
 				{#if query}
 					<div class="self-center pl-1.5 translate-y-[0.5px] bg-transparent">
 						<button
+							aria-label={$i18n.t('Close')}
 							class="p-0.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-900 transition"
 							on:click={() => {
 								query = '';
@@ -176,6 +177,7 @@
 									</div>
 								</button>
 								<button
+									aria-label={$i18n.t('Updated at')}
 									class="px-1.5 py-1 cursor-pointer select-none hidden sm:flex sm:basis-2/5 justify-end"
 									on:click={() => setSortKey('updated_at')}
 								>
@@ -239,6 +241,7 @@
 											<Tooltip content={$i18n.t('Delete')}>
 												<button
 													class="self-center w-fit text-sm p-1.5 hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
+													aria-label={$i18n.t('Delete')}
 													on:click={(e) => {
 														e.stopPropagation();
 														selectedMemory = memory;

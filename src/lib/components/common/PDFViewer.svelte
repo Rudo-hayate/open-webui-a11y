@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy, getContext } from 'svelte';
 	import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.mjs?url';
 	import panzoom, { type PanZoom } from 'panzoom';
 	import Spinner from './Spinner.svelte';
+
+	const i18n = getContext('i18n');
 
 	export let url: string | null = null;
 	export let data: ArrayBuffer | Uint8Array | null = null;
@@ -216,7 +218,7 @@
 			<button
 				class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-500 dark:text-gray-400"
 				on:click={zoomOut}
-				aria-label="Zoom out"
+				aria-label={$i18n.t('Zoom out')}
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -234,14 +236,14 @@
 			<button
 				class="px-1.5 py-1 min-w-[3rem] text-center text-[11px] font-medium text-gray-500 dark:text-gray-400 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition tabular-nums"
 				on:click={resetView}
-				aria-label="Reset zoom"
+				aria-label={$i18n.t('Reset zoom')}
 			>
 				{Math.round(zoomLevel * 100)}%
 			</button>
 			<button
 				class="p-1.5 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition text-gray-500 dark:text-gray-400"
 				on:click={zoomIn}
-				aria-label="Zoom in"
+				aria-label={$i18n.t('Zoom in')}
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
