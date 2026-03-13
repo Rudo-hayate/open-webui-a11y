@@ -193,6 +193,7 @@
 	};
 
 	let itemElement;
+	let chatMenuButton;
 
 	let generating = false;
 
@@ -557,13 +558,17 @@
 						showDeleteConfirm = true;
 					}}
 					onClose={() => {
-						dispatch('unselect');
+						requestAnimationFrame(() => {
+							dispatch('unselect');
+							chatMenuButton?.focus();
+						});
 					}}
 					onPinChange={async () => {
 						dispatch('change');
 					}}
 				>
 					<button
+						bind:this={chatMenuButton}
 						aria-label="Chat Menu"
 						class=" self-center dark:hover:text-white transition m-0"
 						on:click={() => {
