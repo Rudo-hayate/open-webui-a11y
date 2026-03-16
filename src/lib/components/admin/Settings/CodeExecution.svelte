@@ -41,7 +41,7 @@
 		{#if config}
 			<div>
 				<div class="mb-3.5">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+					<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Code Execution')}</h1>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
@@ -165,7 +165,7 @@
 				</div>
 
 				<div class="mb-3.5">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Code Interpreter')}</div>
+					<h2 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Code Interpreter')}</h2>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
