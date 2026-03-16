@@ -197,7 +197,7 @@
 <div class="flex flex-col h-full justify-between text-sm" id="tab-general">
 	<div class="  overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div class="">
-			<div class=" mb-1 text-sm font-medium">{$i18n.t('WebUI Settings')}</div>
+			<h2 class=" mb-1 text-sm font-medium">{$i18n.t('WebUI Settings')}</h2>
 
 			<div class="flex w-full justify-between">
 				<div class=" self-center text-xs font-medium">{$i18n.t('Theme')}</div>
@@ -286,7 +286,7 @@
 			<hr class="border-gray-100/30 dark:border-gray-850/30 my-3" />
 
 			<div>
-				<div class=" my-2.5 text-sm font-medium">{$i18n.t('System Prompt')}</div>
+				<h2 class=" my-2.5 text-sm font-medium">{$i18n.t('System Prompt')}</h2>
 				<Textarea
 					bind:value={system}
 					className={'w-full text-sm outline-hidden resize-vertical' +
@@ -302,7 +302,7 @@
 		{#if $user?.role === 'admin' || (($user?.permissions.chat?.controls ?? true) && ($user?.permissions.chat?.params ?? true))}
 			<div class="mt-2 space-y-3 pr-1.5">
 				<div class="flex justify-between items-center text-sm">
-					<div class="  font-medium">{$i18n.t('Advanced Parameters')}</div>
+					<h2 class="  font-medium">{$i18n.t('Advanced Parameters')}</h2>
 					<button
 						class=" text-xs font-medium {($settings?.highContrastMode ?? false)
 							? 'text-gray-800 dark:text-gray-100'
