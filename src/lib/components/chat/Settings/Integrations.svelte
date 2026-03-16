@@ -86,7 +86,7 @@
 				<div class="pr-1.5">
 					<div class="">
 						<div class="flex justify-between items-center mb-0.5">
-							<div class="font-medium">{$i18n.t('Manage Tool Servers')}</div>
+							<h2 class="font-medium">{$i18n.t('Manage Tool Servers')}</h2>
 
 							<Tooltip content={$i18n.t('Add Connection')}>
 								<button
