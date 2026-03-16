@@ -48,10 +48,10 @@
 	<div class=" space-y-3 overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div>
 			<div class=" mb-2.5 text-sm font-medium flex space-x-2 items-center">
-				<div>
+				<h2>
 					{$WEBUI_NAME}
 					{$i18n.t('Version')}
-				</div>
+				</h2>
 			</div>
 			<div class="flex w-full justify-between items-center">
 				<div class="flex flex-col text-xs text-gray-700 dark:text-gray-200">
@@ -101,7 +101,7 @@
 			<hr class=" border-gray-100/30 dark:border-gray-850/30" />
 
 			<div>
-				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Ollama Version')}</div>
+				<h2 class=" mb-2.5 text-sm font-medium">{$i18n.t('Ollama Version')}</h2>
 				<div class="flex w-full">
 					<div class="flex-1 text-xs text-gray-700 dark:text-gray-200">
 						{ollamaVersion ?? 'N/A'}
