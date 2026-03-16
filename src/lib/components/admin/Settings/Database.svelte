@@ -78,7 +78,10 @@
 		/>
 
 		<div>
-			<div class="mb-1 text-sm font-medium">{$i18n.t('Config')}</div>
+			<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Database')}</h1>
+			<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+
+			<h2 class="mb-1 text-sm font-medium">{$i18n.t('Config')}</h2>
 
 			<div>
 				<div class="py-0.5 flex w-full justify-between">
@@ -117,7 +120,7 @@
 
 		{#if $config?.features.enable_admin_export ?? true}
 			<div>
-				<div class="mb-1 text-sm font-medium">{$i18n.t('Database')}</div>
+				<h2 class="mb-1 text-sm font-medium">{$i18n.t('Database')}</h2>
 
 				<div>
 					<div class="py-0.5 flex w-full justify-between">
