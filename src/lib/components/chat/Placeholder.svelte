@@ -149,9 +149,9 @@
 								placement="top"
 								className=" flex items-center "
 							>
-								<span class="line-clamp-1">
+								<h1 class="line-clamp-1">
 									{models[selectedModelIdx]?.name}
-								</span>
+								</h1>
 							</Tooltip>
 						{:else}
 							{$i18n.t('Hello, {{name}}', { name: $user?.name })}
