@@ -92,7 +92,7 @@
 	>
 		<div class="  overflow-y-scroll scrollbar-hidden h-full pr-1.5">
 			<div class="mb-3.5">
-				<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Tasks')}</div>
+				<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Tasks')}</h1>
 
 				<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
