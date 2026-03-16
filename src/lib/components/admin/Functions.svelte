@@ -286,9 +286,9 @@
 
 				<div class="flex justify-between items-center w-full">
 					<div class="flex items-center md:self-center text-xl font-medium px-0.5 gap-2 shrink-0">
-						<div>
+						<h1>
 							{$i18n.t('Functions')}
-						</div>
+						</h1>
 
 						<div class="text-lg font-medium text-gray-500 dark:text-gray-500">
 							{filteredItems.length}
