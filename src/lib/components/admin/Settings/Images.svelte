@@ -289,7 +289,7 @@
 		{#if config}
 			<div>
 				<div class="mb-3">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+					<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Images')}</h1>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
@@ -307,7 +307,7 @@
 				</div>
 
 				<div class="mb-3">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Create Image')}</div>
+					<h2 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Create Image')}</h2>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
@@ -880,7 +880,7 @@
 				</div>
 
 				<div class="mb-3">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Edit Image')}</div>
+					<h2 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Edit Image')}</h2>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
