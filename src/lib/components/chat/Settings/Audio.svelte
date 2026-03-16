@@ -177,7 +177,7 @@
 >
 	<div class=" space-y-3 overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div>
-			<div class=" mb-1 text-sm font-medium">{$i18n.t('STT Settings')}</div>
+			<h2 class=" mb-1 text-sm font-medium">{$i18n.t('STT Settings')}</h2>
 
 			{#if $config.audio.stt.engine !== 'web'}
 				<div class=" py-0.5 flex w-full justify-between">
@@ -241,7 +241,7 @@
 		</div>
 
 		<div>
-			<div class=" mb-1 text-sm font-medium">{$i18n.t('TTS Settings')}</div>
+			<h2 class=" mb-1 text-sm font-medium">{$i18n.t('TTS Settings')}</h2>
 
 			<div class=" py-0.5 flex w-full justify-between">
 				<div class=" self-center text-xs font-medium">{$i18n.t('Text-to-Speech Engine')}</div>
@@ -359,7 +359,7 @@
 			{/if}
 		{:else if $config.audio.tts.engine === ''}
 			<div>
-				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Set Voice')}</div>
+				<h2 class=" mb-2.5 text-sm font-medium">{$i18n.t('Set Voice')}</h2>
 				<div class="flex w-full">
 					<div class="flex-1">
 						<select
@@ -390,7 +390,7 @@
 			</div>
 		{:else if $config.audio.tts.engine !== ''}
 			<div>
-				<div class=" mb-2.5 text-sm font-medium">{$i18n.t('Set Voice')}</div>
+				<h2 class=" mb-2.5 text-sm font-medium">{$i18n.t('Set Voice')}</h2>
 				<div class="flex w-full">
 					<div class="flex-1">
 						<input
