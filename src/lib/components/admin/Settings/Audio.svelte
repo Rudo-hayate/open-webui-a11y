@@ -208,9 +208,12 @@
 	}}
 >
 	<div class=" space-y-3 overflow-y-scroll scrollbar-hidden h-full">
+		<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Audio')}</h1>
+		<hr aria-hidden="true" class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
+
 		<div class="flex flex-col gap-3">
 			<div>
-				<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Speech-to-Text')}</div>
+				<h2 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Speech-to-Text')}</h2>
 
 				<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
@@ -498,7 +501,7 @@
 			</div>
 
 			<div>
-				<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Text-to-Speech')}</div>
+				<h2 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Text-to-Speech')}</h2>
 
 				<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
