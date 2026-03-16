@@ -219,14 +219,14 @@
 	<div class=" overflow-y-scroll scrollbar-hidden h-full">
 		{#if ENABLE_OPENAI_API !== null && ENABLE_OLLAMA_API !== null && connectionsConfig !== null}
 			<div class="mb-3.5">
-				<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+				<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Connections')}</h1>
 
 				<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
 				<div class="my-2">
 					<div class="mt-2 space-y-2">
 						<div class="flex justify-between items-center text-sm">
-							<div class="  font-medium">{$i18n.t('OpenAI API')}</div>
+							<h2 class="  font-medium">{$i18n.t('OpenAI API')}</h2>
 
 							<div class="flex items-center">
 								<div class="">
@@ -292,7 +292,7 @@
 
 				<div class=" my-2">
 					<div class="flex justify-between items-center text-sm mb-2">
-						<div class="  font-medium">{$i18n.t('Ollama API')}</div>
+						<h2 class="  font-medium">{$i18n.t('Ollama API')}</h2>
 
 						<div class="mt-1">
 							<Switch
@@ -363,7 +363,7 @@
 
 				<div class="my-2">
 					<div class="flex justify-between items-center text-sm">
-						<div class="  font-medium">{$i18n.t('Direct Connections')}</div>
+						<h2 class="  font-medium">{$i18n.t('Direct Connections')}</h2>
 
 						<div class="flex items-center">
 							<div class="">
