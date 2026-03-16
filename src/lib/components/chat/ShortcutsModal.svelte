@@ -46,7 +46,7 @@
 <Modal bind:show>
 	<div class="text-gray-700 dark:text-gray-100 px-5 py-4">
 		<div class="flex justify-between dark:text-gray-300 pb-2">
-			<div class="text-lg font-medium self-center">{$i18n.t('Keyboard Shortcuts')}</div>
+			<h1 class="text-lg font-medium self-center">{$i18n.t('Keyboard Shortcuts')}</h1>
 			<button class="self-center" aria-label={$i18n.t('Close')} on:click={() => (show = false)}>
 				<XMark className={'size-5'} />
 			</button>
@@ -60,7 +60,7 @@
 			{/if}
 
 			<div class="flex justify-between dark:text-gray-300 pb-2">
-				<div class="text-base self-center">{$i18n.t(category)}</div>
+				<h2 class="text-base self-center">{$i18n.t(category)}</h2>
 			</div>
 			<div class="flex flex-col md:flex-row w-full md:space-x-2 dark:text-gray-200">
 				<div class="flex flex-col w-full sm:flex-row sm:justify-center sm:space-x-6">
