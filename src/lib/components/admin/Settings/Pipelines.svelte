@@ -224,9 +224,9 @@
 	<div class="overflow-y-scroll scrollbar-hidden h-full">
 		{#if PIPELINES_LIST !== null}
 			<div class="flex w-full justify-between mb-2">
-				<div class=" self-center text-sm font-medium">
+				<h1 class=" self-center text-sm font-medium">
 					{$i18n.t('Manage Pipelines')}
-				</div>
+				</h1>
 			</div>
 
 			{#if PIPELINES_LIST.length > 0}
