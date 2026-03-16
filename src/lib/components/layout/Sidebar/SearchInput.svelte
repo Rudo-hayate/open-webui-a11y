@@ -320,6 +320,7 @@
 					<div class="max-h-60 overflow-auto">
 						{#each filteredItems as item, itemIdx}
 							<button
+								tabindex="-1"
 								class=" px-1.5 py-0.5 flex gap-1 hover:bg-gray-100 dark:hover:bg-gray-900 w-full rounded {selectedIdx ===
 								itemIdx
 									? 'bg-gray-100 dark:bg-gray-900'
@@ -356,6 +357,7 @@
 					<div class=" max-h-60 overflow-auto">
 						{#each filteredOptions as option, optionIdx}
 							<button
+								tabindex="-1"
 								class=" px-1.5 py-0.5 flex gap-1 hover:bg-gray-100 dark:hover:bg-gray-900 w-full rounded {selectedIdx ===
 								optionIdx
 									? 'bg-gray-100 dark:bg-gray-900'
