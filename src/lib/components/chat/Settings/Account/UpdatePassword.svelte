@@ -44,7 +44,7 @@
 	}}
 >
 	<div class="flex justify-between items-center text-sm">
-		<div class="  font-medium">{$i18n.t('Change Password')}</div>
+		<h2 class="  font-medium">{$i18n.t('Change Password')}</h2>
 		<button
 			class=" text-xs font-medium text-gray-500"
 			type="button"

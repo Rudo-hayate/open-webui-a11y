@@ -128,7 +128,7 @@
 	<div class=" overflow-y-scroll max-h-[28rem] md:max-h-full">
 		<div class="space-y-1">
 			<div>
-				<div class="text-base font-medium">{$i18n.t('Your Account')}</div>
+				<h2 class="text-base font-medium">{$i18n.t('Your Account')}</h2>
 
 				<div class="text-xs text-gray-500 mt-0.5">
 					{$i18n.t('Manage your account information.')}
