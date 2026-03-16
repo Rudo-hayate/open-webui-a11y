@@ -104,7 +104,7 @@
 		{#if evaluationConfig !== null}
 			<div class="">
 				<div class="mb-3">
-					<div class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('General')}</div>
+					<h1 class=" mt-0.5 mb-2.5 text-base font-medium">{$i18n.t('Evaluations')}</h1>
 
 					<hr class=" border-gray-100/30 dark:border-gray-850/30 my-2" />
 
@@ -120,9 +120,9 @@
 				{#if evaluationConfig.ENABLE_EVALUATION_ARENA_MODELS}
 					<div class="mb-3">
 						<div class=" mt-0.5 mb-2.5 text-base font-medium flex justify-between items-center">
-							<div>
+							<h2>
 								{$i18n.t('Manage')}
-							</div>
+							</h2>
 
 							<div>
 								<Tooltip content={$i18n.t('Add Arena Model')}>
