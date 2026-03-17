@@ -47,13 +47,6 @@
 			console.log('Escape');
 			show = false;
 		}
-
-		if (event.key === 'Enter') {
-			console.log('Enter');
-			event.preventDefault();
-			event.stopPropagation();
-			confirmHandler();
-		}
 	};
 
 	const confirmHandler = async () => {
