@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { getContext, onMount, tick } from 'svelte';
+	import { getContext, onMount } from 'svelte';
 	import { toast } from 'svelte-sonner';
 	import { config, models, settings, user } from '$lib/stores';
 	import { updateUserSettings } from '$lib/apis/users';
@@ -32,12 +32,6 @@
 	const i18n = getContext('i18n');
 
 	export let show = false;
-
-	$: if (show) {
-		addScrollListener();
-	} else {
-		removeScrollListener();
-	}
 
 	interface SettingsTab {
 		id: string;
@@ -548,30 +542,6 @@
 
 	let selectedTab = 'general';
 
-	// Function to handle sideways scrolling
-	const scrollHandler = (event) => {
-		const settingsTabsContainer = document.getElementById('settings-tabs-container');
-		if (settingsTabsContainer) {
-			event.preventDefault(); // Prevent default vertical scrolling
-			settingsTabsContainer.scrollLeft += event.deltaY; // Scroll sideways
-		}
-	};
-
-	const addScrollListener = async () => {
-		await tick();
-		const settingsTabsContainer = document.getElementById('settings-tabs-container');
-		if (settingsTabsContainer) {
-			settingsTabsContainer.addEventListener('wheel', scrollHandler);
-		}
-	};
-
-	const removeScrollListener = async () => {
-		await tick();
-		const settingsTabsContainer = document.getElementById('settings-tabs-container');
-		if (settingsTabsContainer) {
-			settingsTabsContainer.removeEventListener('wheel', scrollHandler);
-		}
-	};
 
 	onMount(() => {
 		availableSettings = getAvailableSettings();
@@ -603,7 +573,7 @@
 			<div
 				role="tablist"
 				id="settings-tabs-container"
-				class="tabs flex flex-row overflow-x-auto gap-2.5 mx-3 md:pr-4 md:gap-1 md:flex-col flex-1 md:flex-none md:w-50 md:min-h-[42rem] md:max-h-[42rem] dark:text-gray-200 text-sm text-left mb-1 md:mb-0 -translate-y-1"
+				class="tabs flex flex-row flex-wrap overflow-x-hidden gap-2.5 mx-3 md:pr-4 md:gap-1 md:flex-col md:flex-nowrap md:overflow-x-auto flex-1 md:flex-none md:w-50 md:min-h-[42rem] md:max-h-[42rem] dark:text-gray-200 text-sm text-left mb-1 md:mb-0 -translate-y-1"
 			>
 				<div
 					class="hidden md:flex w-full rounded-full px-2.5 gap-2 bg-gray-100/80 dark:bg-gray-850/80 backdrop-blur-2xl my-1 mb-1.5"
