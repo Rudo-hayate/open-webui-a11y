@@ -63,6 +63,22 @@
 		dispatch('confirm', _inputValue);
 	};
 
+	const activateFocusTrap = () => {
+		if (!modalElement) return;
+		focusTrap = FocusTrap.createFocusTrap(modalElement, {
+			initialFocus: false,
+			fallbackFocus: () => modalElement
+		});
+		focusTrap.activate();
+	};
+
+	const deactivateFocusTrap = () => {
+		if (focusTrap) {
+			focusTrap.deactivate();
+			focusTrap = null;
+		}
+	};
+
 	onMount(() => {
 		mounted = true;
 	});
@@ -70,14 +86,11 @@
 	$: if (mounted) {
 		if (show && modalElement) {
 			document.body.appendChild(modalElement);
-			focusTrap = FocusTrap.createFocusTrap(modalElement);
-			focusTrap.activate();
-
 			window.addEventListener('keydown', handleKeyDown);
 			document.body.style.overflow = 'hidden';
+			activateFocusTrap();
 		} else if (modalElement) {
-			focusTrap.deactivate();
-
+			deactivateFocusTrap();
 			window.removeEventListener('keydown', handleKeyDown);
 			if (document.body.contains(modalElement)) {
 				document.body.removeChild(modalElement);
@@ -88,10 +101,8 @@
 
 	onDestroy(() => {
 		show = false;
+		deactivateFocusTrap();
 		window.removeEventListener('keydown', handleKeyDown);
-		if (focusTrap) {
-			focusTrap.deactivate();
-		}
 		if (modalElement && document.body.contains(modalElement)) {
 			document.body.removeChild(modalElement);
 		}
