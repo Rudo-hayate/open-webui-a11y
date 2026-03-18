@@ -46,6 +46,28 @@
 		}
 	};
 
+	const activateFocusTrap = () => {
+		if (!modalElement) return;
+		focusTrap = FocusTrap.createFocusTrap(modalElement, {
+			allowOutsideClick: (e) => {
+				const target = e.target as HTMLElement;
+				return (
+					target.closest('[data-sonner-toast]') !== null ||
+					target.closest('.modal-content') === null
+				);
+			},
+			fallbackFocus: () => modalElement
+		});
+		focusTrap.activate();
+	};
+
+	const deactivateFocusTrap = () => {
+		if (focusTrap) {
+			focusTrap.deactivate();
+			focusTrap = null;
+		}
+	};
+
 	const isTopModal = () => {
 		const modals = document.getElementsByClassName('modal');
 		return modals.length && modals[modals.length - 1] === modalElement;
@@ -57,19 +79,11 @@
 
 	$: if (show && modalElement) {
 		document.body.appendChild(modalElement);
-		focusTrap = FocusTrap.createFocusTrap(modalElement, {
-			allowOutsideClick: (e) => {
-				return (
-					e.target.closest('[data-sonner-toast]') !== null ||
-					e.target.closest('.modal-content') === null
-				);
-			}
-		});
-		focusTrap.activate();
 		window.addEventListener('keydown', handleKeyDown);
 		document.body.style.overflow = 'hidden';
+		activateFocusTrap();
 	} else if (modalElement) {
-		focusTrap.deactivate();
+		deactivateFocusTrap();
 		window.removeEventListener('keydown', handleKeyDown);
 		if (document.body.contains(modalElement)) {
 			document.body.removeChild(modalElement);
@@ -79,9 +93,7 @@
 
 	onDestroy(() => {
 		show = false;
-		if (focusTrap) {
-			focusTrap.deactivate();
-		}
+		deactivateFocusTrap();
 		if (modalElement && document.body.contains(modalElement)) {
 			document.body.removeChild(modalElement);
 		}
@@ -96,6 +108,7 @@
 		bind:this={modalElement}
 		aria-modal="true"
 		role="dialog"
+		tabindex="-1"
 		class="modal fixed top-0 right-0 left-0 bottom-0 bg-black/30 dark:bg-black/60 w-full h-screen max-h-[100dvh] {containerClassName}  flex justify-center z-9999 overflow-y-auto overscroll-contain"
 		style="scrollbar-gutter: stable;"
 		in:fade={{ duration: 10 }}
