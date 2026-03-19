@@ -140,16 +140,16 @@
 					</div>
 
 					<div
-						class=" text-3xl @sm:text-3xl line-clamp-1 flex items-center"
+						class=" text-3xl @sm:text-3xl flex flex-1 items-center text-center"
 						in:fade={{ duration: 100 }}
 					>
 						{#if models[selectedModelIdx]?.name}
 							<Tooltip
 								content={models[selectedModelIdx]?.name}
 								placement="top"
-								className=" flex items-center "
+								className=" flex w-full items-center justify-center "
 							>
-								<span class="line-clamp-1">
+								<span class="whitespace-normal wrap-break-word hyphens-auto">
 									{models[selectedModelIdx]?.name}
 								</span>
 							</Tooltip>
