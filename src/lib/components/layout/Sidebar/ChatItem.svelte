@@ -424,7 +424,7 @@
 				? 'bg-gray-100 dark:bg-gray-900 selected'
 				: selected
 					? 'bg-gray-100 dark:bg-gray-950 selected'
-					: ' group-hover:bg-gray-100 dark:group-hover:bg-gray-950'}  whitespace-nowrap text-ellipsis"
+					: ' group-hover:bg-gray-100 group-focus-within:bg-gray-100 dark:group-hover:bg-gray-950 dark:group-focus-within:bg-gray-950'}  whitespace-nowrap text-ellipsis"
 			href="/c/{id}"
 			on:click={() => {
 				dispatch('select');
@@ -450,7 +450,6 @@
 			on:mouseleave={(e) => {
 				mouseOver = false;
 			}}
-			on:focus={(e) => {}}
 			draggable="false"
 		>
 			<!-- Loading spinner for active chat (left side) -->
@@ -468,7 +467,7 @@
 
 			<!-- Time ago indicator -->
 			{#if createdAt && !mouseOver}
-				<div class="shrink-0 self-center text-[10px] text-gray-400 dark:text-gray-500 pl-2">
+				<div class="shrink-0 self-center text-[10px] text-gray-400 dark:text-gray-500 pl-2 group-focus-within:hidden">
 					{formatTimeAgo(createdAt)}
 				</div>
 			{/if}
@@ -483,7 +482,7 @@
 			? 'from-gray-100 dark:from-gray-900 selected'
 			: selected
 				? 'from-gray-100 dark:from-gray-950 selected'
-				: 'invisible group-hover:visible from-gray-100 dark:from-gray-950'}
+				: 'opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto from-gray-100 dark:from-gray-950'}
             absolute {className === 'pr-2'
 			? 'right-[8px]'
 			: 'right-1'} top-[4px] py-1 pr-0.5 mr-1.5 pl-5 bg-linear-to-l from-80%
