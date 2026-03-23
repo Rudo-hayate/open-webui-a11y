@@ -201,14 +201,14 @@
 							}}
 							{moveChatHandler}
 						>
-							<button
+							<span
 								class="flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
 								id="chat-context-menu-button"
 							>
-								<div class=" m-auto self-center">
+								<span class=" m-auto self-center">
 									<EllipsisHorizontal className=" size-5" strokeWidth="1.5" />
-								</div>
-							</button>
+								</span>
+							</span>
 						</Menu>
 					{/if}
 
