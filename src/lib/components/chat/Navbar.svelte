@@ -219,7 +219,7 @@
 								on:click={async () => {
 									await showControls.set(!$showControls);
 								}}
-								aria-label="Controls"
+								aria-label={$i18n.t('Controls')}
 							>
 								<div class=" m-auto self-center">
 									<Knobs className=" size-5" strokeWidth="1" />
