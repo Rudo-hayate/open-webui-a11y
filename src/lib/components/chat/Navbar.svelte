@@ -69,7 +69,7 @@
 	on:click={() => {
 		initNewChat();
 	}}
-	aria-label="New Chat"
+	aria-label={$i18n.t('New Chat')}
 />
 
 <nav
@@ -180,7 +180,7 @@
 								on:click={() => {
 									initNewChat();
 								}}
-								aria-label="New Chat"
+								aria-label={$i18n.t('New Chat')}
 							>
 								<div class=" m-auto self-center">
 									<ChatPlus className=" size-4.5" strokeWidth="1.5" />
