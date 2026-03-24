@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { getContext } from 'svelte';
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
 	import Plus from '$lib/components/icons/Plus.svelte';
 	import { WEBUI_BASE_URL } from '$lib/constants';
+
+	const i18n = getContext('i18n');
 
 	let selected = '';
 </script>
@@ -19,7 +22,7 @@
 
 		<Tooltip content="Home" placement="right">
 			<button
-				aria-label="Home"
+				aria-label={$i18n.t('Home')}
 				class=" cursor-pointer {selected === 'home' ? 'rounded-2xl' : 'rounded-full'}"
 				on:click={() => {
 					selected = 'home';
@@ -48,7 +51,7 @@
 			</div>
 		{/if}
 		<button
-			aria-label="Chat"
+			aria-label={$i18n.t('Chat')}
 			class=" cursor-pointer bg-transparent"
 			on:click={() => {
 				selected = '';

@@ -1690,7 +1690,7 @@
 											>
 												<button
 													class="translate-y-[0.5px] px-1 flex gap-1 items-center text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200 rounded-lg self-center transition"
-													aria-label="Available Tools"
+													aria-label={$i18n.t('Available Tools')}
 													type="button"
 													on:click={() => {
 														showTools = !showTools;
