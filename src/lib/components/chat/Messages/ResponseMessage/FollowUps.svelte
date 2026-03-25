@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
-	import { onMount, tick, getContext } from 'svelte';
+	import { getContext } from 'svelte';
+	import { settings } from '$lib/stores';
 
 	const i18n = getContext('i18n');
 
@@ -17,7 +18,7 @@
 		{#each followUps as followUp, idx (idx)}
 			<Tooltip content={followUp} placement="top-start" className="line-clamp-1">
 				<button
-					class=" py-1.5 bg-transparent text-left text-sm flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition cursor-pointer w-full"
+					class=" py-1.5 bg-transparent text-left text-sm flex items-center gap-2 {($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300' : 'text-gray-500 dark:text-gray-400'} hover:text-black dark:hover:text-white transition cursor-pointer w-full"
 					on:click={() => onClick(followUp)}
 					aria-label={$i18n.t('Follow up: {{question}}', { question: followUp })}
 				>
