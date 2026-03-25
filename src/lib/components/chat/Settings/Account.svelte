@@ -130,7 +130,7 @@
 			<div>
 				<div class="text-base font-medium">{$i18n.t('Your Account')}</div>
 
-				<div class="text-xs text-gray-500 mt-0.5">
+				<div class="text-xs {($settings?.highContrastMode ?? false) ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500'} mt-0.5">
 					{$i18n.t('Manage your account information.')}
 				</div>
 			</div>
