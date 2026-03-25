@@ -1079,4 +1079,12 @@
 	richColors
 	position="top-right"
 	closeButton
+	style="
+		--success-bg: var(--toast-success-bg);
+		--success-border: var(--toast-success-border);
+		--success-text: var(--toast-success-text);
+		--error-bg: var(--toast-error-bg);
+		--error-border: var(--toast-error-border);
+		--error-text: var(--toast-error-text);
+	"
 />

@@ -33,6 +33,22 @@
 /* --app-text-scale is updated via the UI Scale slider (Interface.svelte) */
 :root {
 	--app-text-scale: 1;
+
+	--toast-success-bg: var(--color-green-50);
+	--toast-success-border: var(--color-green-200);
+	--toast-success-text: var(--color-green-900);
+	--toast-error-bg: var(--color-rose-50);
+	--toast-error-border: var(--color-rose-200);
+	--toast-error-text: var(--color-red-800);
+}
+
+.dark {
+	--toast-success-bg: var(--color-green-950);
+	--toast-success-border: var(--color-green-900);
+	--toast-success-text: var(--color-green-300);
+	--toast-error-bg: var(--color-red-950);
+	--toast-error-border: var(--color-red-900);
+	--toast-error-text: var(--color-red-300);
 }
 
 html {
