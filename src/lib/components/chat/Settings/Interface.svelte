@@ -202,6 +202,11 @@
 		autoFollowUps = $settings?.autoFollowUps ?? true;
 
 		highContrastMode = $settings?.highContrastMode ?? false;
+		if (highContrastMode) {
+			document.documentElement.classList.add('high-contrast');
+		} else {
+			document.documentElement.classList.remove('high-contrast');
+		}
 
 		detectArtifacts = $settings?.detectArtifacts ?? true;
 		responseAutoCopy = $settings?.responseAutoCopy ?? false;
@@ -426,6 +431,11 @@
 							bind:state={highContrastMode}
 							on:change={() => {
 								saveSettings({ highContrastMode });
+								if (highContrastMode) {
+									document.documentElement.classList.add('high-contrast');
+								} else {
+									document.documentElement.classList.remove('high-contrast');
+								}
 							}}
 						/>
 					</div>

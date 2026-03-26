@@ -57,6 +57,11 @@
 		color: theme(--color-gray-400);
 	}
 
+	.high-contrast input::placeholder,
+	.high-contrast textarea::placeholder {
+		color: theme(--color-gray-700);
+	}
+
 	input[type='checkbox'] {
 		@apply appearance-none size-3.5 align-middle bg-white border border-gray-300 rounded transition cursor-pointer focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-800 dark:border-gray-600 self-center;
 		/* Center the custom mark */
