@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { toast } from 'svelte-sonner';
 
-	import { config } from '$lib/stores';
+	import { config, settings } from '$lib/stores';
 	import { getBackendConfig } from '$lib/apis';
 	import Database from './Settings/Database.svelte';
 
@@ -325,10 +325,10 @@
 				id={tab.id}
 				href={tab.route}
 				draggable="false"
-				class="px-0.5 py-1 min-w-fit rounded-lg flex-1 lg:flex-none flex text-right transition select-none {selectedTab ===
+			class="px-0.5 py-1 min-w-fit rounded-lg flex-1 lg:flex-none flex text-right transition select-none {selectedTab ===
 				tab.id
-					? ''
-					: ' text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}"
+					? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-100 dark:bg-gray-800' : ''}`
+					: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}"
 			>
 				<div class=" self-center mr-2">
 					{#if tab.id === 'general'}

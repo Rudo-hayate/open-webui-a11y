@@ -633,15 +633,7 @@
 								aria-controls="tab-general"
 								aria-selected={selectedTab === 'general'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'general'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'general' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'general';
 								}}
@@ -657,15 +649,7 @@
 								aria-controls="tab-interface"
 								aria-selected={selectedTab === 'interface'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'interface'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'interface' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'interface';
 								}}
@@ -682,15 +666,7 @@
 									aria-controls="tab-connections"
 									aria-selected={selectedTab === 'connections'}
 									class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'connections'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'connections' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 									on:click={() => {
 										selectedTab = 'connections';
 									}}
@@ -708,15 +684,7 @@
 									aria-controls="tab-tools"
 									aria-selected={selectedTab === 'tools'}
 									class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'tools'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'tools' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 									on:click={() => {
 										selectedTab = 'tools';
 									}}
@@ -733,15 +701,7 @@
 								aria-controls="tab-personalization"
 								aria-selected={selectedTab === 'personalization'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'personalization'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'personalization' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'personalization';
 								}}
@@ -757,15 +717,7 @@
 								aria-controls="tab-audio"
 								aria-selected={selectedTab === 'audio'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'audio'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'audio' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'audio';
 								}}
@@ -781,15 +733,7 @@
 								aria-controls="tab-data-controls"
 								aria-selected={selectedTab === 'data_controls'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'data_controls'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'data_controls' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'data_controls';
 								}}
@@ -805,15 +749,7 @@
 								aria-controls="tab-account"
 								aria-selected={selectedTab === 'account'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'account'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'account' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'account';
 								}}
@@ -829,15 +765,7 @@
 								aria-controls="tab-about"
 								aria-selected={selectedTab === 'about'}
 								class={`px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none flex text-left transition
-								${
-									selectedTab === 'about'
-										? ($settings?.highContrastMode ?? false)
-											? 'dark:bg-gray-800 bg-gray-200'
-											: ''
-										: ($settings?.highContrastMode ?? false)
-											? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-											: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'
-								}`}
+								${selectedTab === 'about' ? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white bg-gray-200 dark:bg-gray-800' : ''}` : `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`}`}
 								on:click={() => {
 									selectedTab = 'about';
 								}}
@@ -858,9 +786,7 @@
 					<a
 						href="/admin/settings"
 						draggable="false"
-						class="px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none md:mt-auto flex select-none text-left transition {$settings?.highContrastMode
-							? 'hover:bg-gray-200 dark:hover:bg-gray-800'
-							: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}"
+						class="px-0.5 md:px-2.5 py-1 min-w-fit rounded-xl flex-1 md:flex-none md:mt-auto flex select-none text-left transition {($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}"
 						on:click={async (e) => {
 							e.preventDefault();
 							await goto('/admin/settings');

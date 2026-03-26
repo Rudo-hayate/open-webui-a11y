@@ -2,7 +2,7 @@
 	import { onMount, getContext } from 'svelte';
 	import { goto } from '$app/navigation';
 
-	import { WEBUI_NAME, config, mobile, showSidebar, user } from '$lib/stores';
+	import { WEBUI_NAME, config, mobile, settings, showSidebar, user } from '$lib/stores';
 	import { page } from '$app/stores';
 	import Tooltip from '$lib/components/common/Tooltip.svelte';
 
@@ -62,8 +62,8 @@
 						<a
 							draggable="false"
 							class="min-w-fit p-1.5 {$page.url.pathname.includes('/admin/users')
-								? ''
-								: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition select-none"
+								? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white' : ''}`
+								: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`} transition select-none"
 							href="/admin">{$i18n.t('Users')}</a
 						>
 
@@ -71,8 +71,8 @@
 							<a
 								draggable="false"
 								class="min-w-fit p-1.5 {$page.url.pathname.includes('/admin/analytics')
-									? ''
-									: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition select-none"
+									? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white' : ''}`
+									: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`} transition select-none"
 								href="/admin/analytics">{$i18n.t('Analytics')}</a
 							>
 						{/if}
@@ -80,24 +80,24 @@
 						<a
 							draggable="false"
 							class="min-w-fit p-1.5 {$page.url.pathname.includes('/admin/evaluations')
-								? ''
-								: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition select-none"
+								? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white' : ''}`
+								: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`} transition select-none"
 							href="/admin/evaluations">{$i18n.t('Evaluations')}</a
 						>
 
 						<a
 							draggable="false"
 							class="min-w-fit p-1.5 {$page.url.pathname.includes('/admin/functions')
-								? ''
-								: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition select-none"
+								? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white' : ''}`
+								: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`} transition select-none"
 							href="/admin/functions">{$i18n.t('Functions')}</a
 						>
 
 						<a
 							draggable="false"
 							class="min-w-fit p-1.5 {$page.url.pathname.includes('/admin/settings')
-								? ''
-								: 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'} transition select-none"
+								? `font-semibold ${($settings?.highContrastMode ?? false) ? 'text-black dark:text-white' : ''}`
+								: `${($settings?.highContrastMode ?? false) ? 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white' : 'text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}`} transition select-none"
 							href="/admin/settings">{$i18n.t('Settings')}</a
 						>
 					</div>
