@@ -42,6 +42,8 @@
 
 	const i18n = getContext('i18n');
 
+	$: highContrastMode = $settings?.highContrastMode ?? false;
+
 	export let initNewChat: Function;
 	export let shareEnabled: boolean = false;
 	export let scrollTop = 0;
@@ -202,7 +204,7 @@
 							{moveChatHandler}
 						>
 							<button
-								class="flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+								class="flex cursor-pointer px-2 py-2 rounded-xl {highContrastMode ? 'hover:bg-gray-200 dark:hover:bg-gray-700' : 'hover:bg-gray-50 dark:hover:bg-gray-850'} transition"
 								id="chat-context-menu-button"
 							>
 								<div class=" m-auto self-center">
@@ -215,7 +217,7 @@
 					{#if $user?.role === 'admin' || ($user?.permissions.chat?.controls ?? true)}
 						<Tooltip content={$i18n.t('Controls')}>
 							<button
-								class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+								class=" flex cursor-pointer px-2 py-2 rounded-xl {highContrastMode ? 'hover:bg-gray-200 dark:hover:bg-gray-700' : 'hover:bg-gray-50 dark:hover:bg-gray-850'} transition"
 								on:click={async () => {
 									await showControls.set(!$showControls);
 								}}
@@ -240,7 +242,7 @@
 							}}
 						>
 							<div
-								class="select-none flex rounded-xl p-1.5 w-full hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+								class="select-none flex rounded-xl p-1.5 w-full {highContrastMode ? 'hover:bg-gray-200 dark:hover:bg-gray-700' : 'hover:bg-gray-50 dark:hover:bg-gray-850'} transition"
 							>
 								<div class=" self-center">
 									<span class="sr-only">{$i18n.t('User menu')}</span>
