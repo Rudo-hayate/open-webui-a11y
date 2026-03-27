@@ -384,10 +384,10 @@
 			id="sidebar-chat-item"
 			class=" w-full flex justify-between rounded-xl px-[11px] py-[6px] {id === $chatId ||
 			confirmEdit
-				? 'bg-gray-200 dark:bg-gray-900 selected'
+				? 'bg-gray-900/10 dark:bg-gray-100/10 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10 selected'
 				: selected
-					? 'bg-gray-200 dark:bg-gray-950 selected'
-					: 'group-hover:bg-gray-200 dark:group-hover:bg-gray-900'}  whitespace-nowrap text-ellipsis relative group-hover:text-gray-800 dark:group-hover:text-gray-100 {generating
+					? 'bg-gray-900/10 dark:bg-gray-100/10 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10 selected'
+					: 'group-hover:bg-gray-900/5 dark:group-hover:bg-gray-100/5'}  whitespace-nowrap text-ellipsis relative group-hover:text-gray-800 dark:group-hover:text-gray-100 {generating
 				? 'cursor-not-allowed'
 				: ''}"
 		>
@@ -420,10 +420,10 @@
 			id="sidebar-chat-item"
 			class=" w-full flex justify-between rounded-xl px-[11px] py-[6px] {id === $chatId ||
 			confirmEdit
-				? 'bg-gray-200 dark:bg-gray-900 selected'
+				? 'bg-gray-900/10 dark:bg-gray-100/10 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10 selected'
 				: selected
-					? 'bg-gray-200 dark:bg-gray-950 selected'
-					: ' group-hover:bg-gray-200 dark:group-hover:bg-gray-900'}  whitespace-nowrap text-ellipsis group-hover:text-gray-800 dark:group-hover:text-gray-100"
+					? 'bg-gray-900/10 dark:bg-gray-100/10 ring-1 ring-inset ring-gray-900/10 dark:ring-gray-100/10 selected'
+					: 'group-hover:bg-gray-900/5 dark:group-hover:bg-gray-100/5'}  whitespace-nowrap text-ellipsis group-hover:text-gray-800 dark:group-hover:text-gray-100"
 			href="/c/{id}"
 			on:click={() => {
 				dispatch('select');
@@ -482,7 +482,7 @@
 			? 'from-gray-200 dark:from-gray-900 selected'
 			: selected
 				? 'from-gray-200 dark:from-gray-950 selected'
-				: 'invisible group-hover:visible from-gray-200 dark:from-gray-900'}
+				: 'invisible group-hover:visible from-gray-100 dark:from-gray-900'}
             absolute {className === 'pr-2'
 			? 'right-[8px]'
 			: 'right-1'} top-[4px] py-1 pr-0.5 mr-1.5 pl-5 bg-linear-to-l from-80%
