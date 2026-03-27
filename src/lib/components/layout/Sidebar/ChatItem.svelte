@@ -384,10 +384,10 @@
 			id="sidebar-chat-item"
 			class=" w-full flex justify-between rounded-xl px-[11px] py-[6px] {id === $chatId ||
 			confirmEdit
-				? 'bg-gray-100 dark:bg-gray-900 selected'
+				? 'bg-gray-200 dark:bg-gray-900 selected'
 				: selected
-					? 'bg-gray-100 dark:bg-gray-950 selected'
-					: 'group-hover:bg-gray-100 dark:group-hover:bg-gray-950'}  whitespace-nowrap text-ellipsis relative {generating
+					? 'bg-gray-200 dark:bg-gray-950 selected'
+					: 'group-hover:bg-gray-200 dark:group-hover:bg-gray-900'}  whitespace-nowrap text-ellipsis relative group-hover:text-gray-800 dark:group-hover:text-gray-100 {generating
 				? 'cursor-not-allowed'
 				: ''}"
 		>
@@ -420,10 +420,10 @@
 			id="sidebar-chat-item"
 			class=" w-full flex justify-between rounded-xl px-[11px] py-[6px] {id === $chatId ||
 			confirmEdit
-				? 'bg-gray-100 dark:bg-gray-900 selected'
+				? 'bg-gray-200 dark:bg-gray-900 selected'
 				: selected
-					? 'bg-gray-100 dark:bg-gray-950 selected'
-					: ' group-hover:bg-gray-100 dark:group-hover:bg-gray-950'}  whitespace-nowrap text-ellipsis"
+					? 'bg-gray-200 dark:bg-gray-950 selected'
+					: ' group-hover:bg-gray-200 dark:group-hover:bg-gray-900'}  whitespace-nowrap text-ellipsis group-hover:text-gray-800 dark:group-hover:text-gray-100"
 			href="/c/{id}"
 			on:click={() => {
 				dispatch('select');
@@ -479,10 +479,10 @@
 		id="sidebar-chat-item-menu"
 		class="
         {id === $chatId || confirmEdit
-			? 'from-gray-100 dark:from-gray-900 selected'
+			? 'from-gray-200 dark:from-gray-900 selected'
 			: selected
-				? 'from-gray-100 dark:from-gray-950 selected'
-				: 'invisible group-hover:visible from-gray-100 dark:from-gray-950'}
+				? 'from-gray-200 dark:from-gray-950 selected'
+				: 'invisible group-hover:visible from-gray-200 dark:from-gray-900'}
             absolute {className === 'pr-2'
 			? 'right-[8px]'
 			: 'right-1'} top-[4px] py-1 pr-0.5 mr-1.5 pl-5 bg-linear-to-l from-80%
@@ -501,7 +501,7 @@
 			>
 				<Tooltip content={$i18n.t('Generate')}>
 					<button
-						class=" self-center dark:hover:text-white transition disabled:cursor-not-allowed"
+						class=" self-center hover:text-gray-700 dark:hover:text-white transition disabled:cursor-not-allowed"
 						id="generate-title-button"
 						disabled={generating}
 						on:click={() => {
@@ -516,7 +516,7 @@
 			<div class=" flex items-center self-center space-x-1.5">
 				<Tooltip content={$i18n.t('Archive')} className="flex items-center">
 					<button
-						class=" self-center dark:hover:text-white transition"
+						class=" self-center hover:text-gray-700 dark:hover:text-white transition"
 						on:click={() => {
 							archiveChatHandler(id);
 						}}
@@ -528,7 +528,7 @@
 
 				<Tooltip content={$i18n.t('Delete')}>
 					<button
-						class=" self-center dark:hover:text-white transition"
+						class=" self-center hover:text-gray-700 dark:hover:text-white transition"
 						on:click={() => {
 							deleteChatHandler(id);
 						}}
@@ -565,7 +565,7 @@
 				>
 					<button
 						aria-label="Chat Menu"
-						class=" self-center dark:hover:text-white transition m-0"
+						class=" self-center hover:text-gray-700 dark:hover:text-white transition m-0"
 						on:click={() => {
 							dispatch('select');
 						}}
