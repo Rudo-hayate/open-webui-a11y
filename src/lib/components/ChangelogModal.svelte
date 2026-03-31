@@ -72,13 +72,13 @@
 								<div class="w-full">
 									<div
 										class="font-semibold uppercase text-xs {section === 'added'
-											? 'bg-blue-500/20 text-blue-700 dark:text-blue-200'
+											? 'bg-blue-500/20 text-blue-900 dark:bg-blue-900/40 dark:text-blue-100'
 											: section === 'fixed'
-												? 'bg-green-500/20 text-green-700 dark:text-green-200'
+												? 'bg-green-600/20 text-green-900 dark:bg-green-900/40 dark:text-green-100'
 												: section === 'changed'
-													? 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-200'
+													? 'bg-yellow-300 text-yellow-900 dark:bg-yellow-900/100 dark:text-yellow-100'
 													: section === 'removed'
-														? 'bg-red-500/20 text-red-700 dark:text-red-200'
+														? 'bg-red-500/20 text-red-900 dark:bg-red-900/40 dark:text-red-100'
 														: ''}  w-fit rounded-xl px-2 my-2.5"
 									>
 										{section}
