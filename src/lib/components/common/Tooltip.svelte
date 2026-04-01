@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DOMPurify from 'dompurify';
 
-	import { onDestroy } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 
 	import tippy, {
 		type Instance as TippyInstance,
@@ -32,6 +32,12 @@
 		if (tooltipInstance) {
 			tooltipInstance.destroy();
 			tooltipInstance = null;
+		}
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape' && tooltipInstance && tooltipInstance.state.isVisible) {
+			tooltipInstance.hide();
 		}
 	}
 
@@ -70,7 +76,12 @@
 		destroyInstance();
 	}
 
+	onMount(() => {
+		window.addEventListener('keydown', handleKeydown);
+	});
+
 	onDestroy(() => {
+		window.removeEventListener('keydown', handleKeydown);
 		destroyInstance();
 	});
 </script>
